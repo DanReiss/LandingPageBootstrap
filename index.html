@@ -28,14 +28,31 @@
         .no-decoration{
             text-decoration: none;
         }
-
-        @media(max-width: 1000px){
+        .w-75-responsive{
+            width: 75%;
+        }
+        @media(max-width: 767px){
+            .w-75{
+                width: 100%;
+            }
             .color-white-border{
             border-right: none;
             }
             .m-padd{
                 padding-left: 2rem;
             }
+            .center-text{
+                text-align: center;
+            }
+            .justify-texts{
+            text-align: justify;
+            }
+            .w-75-responsive{
+                width: 100%;
+                padding: 1rem;
+                margin: 0;
+            }
+                
         }
         
         @media(max-width: 400px){
@@ -46,7 +63,7 @@
         }
     </style>
 <body>
-    <nav class="navbar navbar-expand-sm bg-light px-4 sticky-top">
+    <nav class="navbar navbar-expand-sm bg-light px-0 px-md-4 sticky-top">
        <div class="container-fluid">
             <a class="navbar-brand display-1" href="#">
                 <h3 class="m-0" style=" color: var(--bs-indigo)">S&G</h3>
@@ -88,7 +105,7 @@
         </div>
         <hr class="w-75 m-auto">
         <div class="card-deck d-flex flex-column justify-content-evenly align-items-center flex-lg-row  m-5 ">
-            <div class="card text-center w-350 display-inline-block">
+            <div class="card text-center w-350 mb-3 mb-md-0">
                 <img class="card-img-top w-350" src="./assets/priscilla-du-preez-XkKCui44iM0-unsplash.jpg" alt="">
                 <div class="card-header">
                     <h4 class="card-title display-5">3000 students</h4>
@@ -97,7 +114,7 @@
                     <div class="card-text">More than 500 teachers who teach on our platform and offer support at different times</div>
                 </div>
             </div>
-            <div class="card text-center w-350 ">
+            <div class="card text-center w-350 mb-3 mb-md-0">
                 <img class="card-img-top w-350" src="./assets/christopher-gower-m_HRfLhgABo-unsplash.jpg" alt="">
                 <div class="card-header">
                     <h4 class="card-title  display-5">Cost benefit</h4>
@@ -106,7 +123,7 @@
                     <div class="card-text">More than 500 teachers who teach on our platform and offer support at different times</div>
                 </div>
             </div>
-            <div class="card text-center w-350  border-bottom">
+            <div class="card text-center w-350 mb-3 mb-md-0">
                 <img class="card-img-top w-350" src="./assets/kimberly-farmer-lUaaKCUANVI-unsplash (1).jpg" alt="">
                 <div class="card-header">
                     <h4 class="card-title  display-5">+500 teachers</h4>
@@ -125,10 +142,10 @@
             <img  class="w-sm-50 d-block m-md-3 w-350" src="./assets/Design sem nome (1).png" alt="">
         </div>
         <hr class="w-75 m-auto">
-        <div class="py-md-5 pl-5 m-padd">
+        <div class="py-md-5 pl-5">
             <ol class="container m-md-auto">
                 <h3 class="display-3 text-info text-center mb-3">Some Benefits</h3>
-                <div class="row mt-5 m-1">
+                <div class="m-padd row mt-5 m-1">
                     <div class="col-sm display-6 text-info">
                         <li>
                             <h4 class="display-6 text-dark">Garantia de 7 dias</h4>
@@ -142,7 +159,7 @@
                         </li>
                     </div>
                 </div>
-                <div class="row mt-3 m-1">
+                <div class="m-padd row mt-3 m-1">
                     <div class="col-sm"></div>
                     <div class="col-sm display-6 text-info">
                         <li>
@@ -155,7 +172,7 @@
         </div>
     </main>
     <footer class="bg-dark py-0 py-md-3 mt-5">
-        <div class="w-75 m-auto">
+        <div class="w-75-responsive m-auto">
             <div class="m-auto d-flex justify-content-between align-items-center pt-5 pb-2 px-3">
                 <a class="navbar-brand display-1" href="#">
                     <h3 class="m-0 text-light">S&G</h3>
@@ -173,20 +190,22 @@
                 </div> 
             </div>
             <hr class="m-auto color-white">
-            <div class="container mt-5">
+            <div class="mt-5 display-7">
                 <div class="row">
-                    <div class="col-12 col-md-6 color-white-border px-1 px-md-5">
-                        <h4 class="text-light text-center text-md-right">The company</h4>
-                        <p class="text-light text-center text-md-right">The company Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit accusantium ad nesciunt odio amet. Natus alias architecto tempore ex, corrupti voluptatem, solut.</p>
+                    <div class="py-2 py-md-0 col-fix col-12 col-md-6 color-white-border px-1 px-md-2">
+                        <h4 class="text-light text-left center-text">The company</h4>
+                        <p class="text-light text-left center-text justify-texts">The company Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit accusantium ad nesciunt odio amet. Natus alias architecto tempore ex, corrupti voluptatem, solut.</p>
                     </div>
-                    <div class="col-12 col-md color-white-border px-1 px-md-5">
-                        <h4 class="text-light text-center text-md-right">Contact Us</h4>
-                        <label class="text-light text-center text-md-right" for="ourEmail">Our Email:</label>
-                        <a href="" name="ourEmail" class="text-center text-md-right">emailforexample@gmail.com</a>
+                    <div class="py-2 py-md-0 col-12 col-md color-white-border px-1 px-md-2">
+                        <div class="d-flex flex-column justify-content-center justify-content-md-start">
+                            <h4 class="text-light  text-left center-text">Contact Us</h4>
+                            <label class="text-light text-left center-text" for="ourEmail">Our Email:</label>
+                            <a href="#" name="ourEmail" class="text-center text-left">emailforexample@gmail.com</a>
+                        </div>
                     </div>
-                    <div class="col-12 col-md px-1 px-md-5">
-                        <h4 class="text-light text-center text-md-right">Sections</h4>
-                        <ul class="d-flex flex-column navbar-nav align-items-center align-items-md-center">
+                    <div class="py-1 py-md-0 col-12 col-md px-1 px-md-2">
+                        <h4 class="text-light  text-left center-text">Sections</h4>
+                        <ul class="d-flex flex-column navbar-nav align-items-center align-items-md-start">
                             <li>
                                 <a href="#" class="no-decoration">Home</a>
                             </li>
